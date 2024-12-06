@@ -1,9 +1,9 @@
 <?php
 	include_once "resource/session.php";
-				$servername = "localhost";
+				$servername = "127.0.0.1.3306";
 				$username = "root";
-				$password = "";
-				$dbname = "register";
+				$password = "mariadb";
+				$dbname = "Farm";
 
 				// Create connection
 				$conn = new mysqli($servername, $username, $password, $dbname);

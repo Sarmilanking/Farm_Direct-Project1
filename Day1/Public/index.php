@@ -11,10 +11,10 @@ include("dbconf.php");
 		
 	}
 	
-	.hint{
+	.hint {
 	position: absolute;
 	z-index: 1;
-	align: center;
+	text-align : center;
 	top: 30%;
 	left: 40%;
 	color: #fff;
@@ -108,7 +108,7 @@ include("dbconf.php");
 	 <p align = "center"style = "color: #fff;">A commercial platform to expand the customer scale for farmers and ease purchase for buyers online.</p>
 	  <div class = "container">
 	  <form method = "post" action = "searchresult.php" style = "width: 45%; margin: auto;">
-			<input type = "text" name = "searchvalue" placeholder="What do you need?" maxlength="20" style="margin-left: 80px;width: 300px; padding:7px; border:1px solid blue; border-radius-top-left: 5px;border-radius-bottom-left: 5px;">
+			<input type = "text" name = "searchvalue" placeholder="What do you need?" maxlength="20" style="margin-left: 80px;width: 300px; padding:7px; border:1px solid blue; border-radius:5px;">
 			<input class= "btn"type = "submit"  name = "search"value ="Search"style = "padding: 7px; background: blue; border: 2px solid blue; color: white;margin-left: -5px; "/>
 
 			

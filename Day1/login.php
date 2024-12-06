@@ -1,8 +1,8 @@
 <?php
 	include_once "resource/session.php";
-				$servername = "localhost";
+				$servername = "126.0.0.3306";
 				$username = "root";
-				$password = "";
+				$password = "mariadb";
 				$dbname = "register";
 
 				// Create connection
