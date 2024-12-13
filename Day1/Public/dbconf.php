@@ -8,8 +8,8 @@ if (session_status() === PHP_SESSION_NONE) {
 include_once("../resource/session.php");
 
 // Database configuration
-$host = '127.0.0.1';
-$user = 'root';
+$host = 'mariadb';
+$user = 'mariadb';
 $password = 'mariadb'; // Replace with your MySQL root password if necessary
 $database = 'Farm';
 $port = 3306;
