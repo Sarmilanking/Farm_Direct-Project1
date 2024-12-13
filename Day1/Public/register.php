@@ -78,7 +78,7 @@
 	<?php
 	
 	
-							$servername = "127.0.0.1.3306";
+							$servername = "127.0.0.1";
 							$username = "root";
 							$password = "mariadb";
 							$dbname = "Farm";
