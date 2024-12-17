@@ -192,5 +192,4 @@ include("dbconf.php");
 	
 	</body>
 	
-
-</html>
+	</html>
