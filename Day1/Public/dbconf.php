@@ -1,24 +1,19 @@
 <?php
-// Start session
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
+define('SERVERNAME', '127.0.0.1');
+define('USERNAME', 'root');
+define('PASSWORD', 'mariadb');
+define('DBNAME', 'Farm');
+try {
+	$connect = mysqli_connect(SERVERNAME,USERNAME,PASSWORD,DBNAME);
+	if (!$connect) {
+		die("connection failed".mysqli_connect_error());
+	} 
+	else {
+		echo "Connected successfully<br>";
+	}
+} 
+catch (Exception $e) {
+	die($e->getMessage());
 }
 
-// Include session management file
-include_once("../resource/session.php");
-
-// Database configuration
-$host = '127.0.0.1:3306';
-$user = 'mariadb';
-$password = 'mariadb'; // Replace with your MySQL root password if necessary
-$database = 'Farm';
-$port = 3306;
-
-// Establish connection
-$conn = mysqli_connect($host, $user, $password, $database, $port);
-
-// Check connection
-if (!$conn) {
-    die("Database Connection Failed: " . mysqli_connect_error());
-}
 ?>

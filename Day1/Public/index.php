@@ -1,7 +1,26 @@
-<?php
-include("dbconf.php");
-?>
-<style>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Farm Connect: Buy and Sell Raw Product Online</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+		
+	
+	<!-- Font-Awesome Icons -->
+	<link href = "assets/css/font-awesome.min.css" rel = "stylesheet">
+			
+    <!-- Custom CSS -->
+    <link href="css/heroic-features.css" rel="stylesheet">
+	<style>
 	.col-md-4:hover img{
 	transform: scale(1.0);
 	transition: all 0.5s ease-in;
@@ -31,35 +50,18 @@ include("dbconf.php");
 
 </style>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Farm Connect: Buy and Sell Raw Product Online</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-		
-	
-	<!-- Font-Awesome Icons -->
-	<link href = "assets/css/font-awesome.min.css" rel = "stylesheet">
-			
-    <!-- Custom CSS -->
-    <link href="css/heroic-features.css" rel="stylesheet">
 
     
 </head>
 
+
+
 <body style="padding-top: 0px; padding-bottom: 0px;">
     
     <!-- Navigation -->
+	<?php
+include("dbconf.php");
+?>
    
 <header class="jumbotron hero-spacer" style= "background: url(assets/img/background4.jpg); margin-top: 0px; background-size: cover; height: 400px;">
     <nav class="navbar navbar-inverse navbar-fixed-top"style= "opacity: 0.7; filter:alpha (opacity =70);" role="navigation">
@@ -162,13 +164,7 @@ include("dbconf.php");
 				</form>
 			
 			</div>
-				<?php
-			
-			}
-				}
-			
-			
-		?>
+				
 		
     </div>
     <!-- /.container -->
