@@ -53,7 +53,7 @@
     include("dbconf.php");
     ?>
 
-    <header class="jumbotron hero-spacer" style="background: url(assets/img/background4.jpg); margin-top: 0px; background-size: cover; height: 400px;">
+    <header class="jumbotron hero-spacer" style="background: url(Public/image/background4.jpg); margin-top: 0px; background-size: cover; height: 400px;">
         <nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: 0.7;" role="navigation">
             <div class="container">
                 <div class="navbar-header">
