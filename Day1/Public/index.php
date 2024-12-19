@@ -43,6 +43,7 @@
         .col-md-4:hover :not(img) {
             opacity: 1;
         }
+        
     </style>
 </head>
 
@@ -53,7 +54,7 @@
     include("dbconf.php");
     ?>
 
-    <header class="jumbotron hero-spacer" style="background: url(Public/image/background4.jpg); margin-top: 0px; background-size: cover; height: 400px;">
+    <header class="jumbotron hero-spacer" style="background: url(image/background4.jpg); margin-top: 0px; background-size: cover; height: 400px;">
         <nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: 0.7;" role="navigation">
             <div class="container">
                 <div class="navbar-header">
@@ -97,12 +98,12 @@
 
             <?php
             $count = "SELECT * FROM products";
-            $countquery = mysqli_query($conn, $count);
+            $countquery = mysqli_query($connect, $count);
             $c = mysqli_num_rows($countquery);
             $rand = rand(9, $c) - 9;
 
             $sql = "SELECT * FROM products WHERE id > '$rand' LIMIT 9";
-            $run_user = mysqli_query($conn, $sql);
+            $run_user = mysqli_query($connect, $sql);
 
             $check_user = mysqli_num_rows($run_user);
 
@@ -115,7 +116,7 @@
                                 <a href="categoryvalue.php?action=view&value=<?php echo $row['Category']; ?>">
                                     <span class="hint"><strong>Click to view</strong></span>
                                     <?php
-                                    echo '<img class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" />';
+                                    echo '<img class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" style="width: 300px; height: 200px;" />';
                                     ?>
                                 </a>
                                 <h4 class="text-info"><strong><?php echo $row['Category']; ?></strong></h4>
