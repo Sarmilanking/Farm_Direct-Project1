@@ -287,7 +287,7 @@
 	
 		<footer id="footer" class="container" style ="background: #fff; color: black; width: 100%; ">
 										<hr style = "border-top: 1px solid #ccc;"><br/><br/><br/>
-										<p align = "center">Contact Us: (234) 8133936723
+										<p align = "center">Contact Us: (+94) 762552365
 											&copy; FarmConnect. All rights reserved</p>
 								
 		</footer>
