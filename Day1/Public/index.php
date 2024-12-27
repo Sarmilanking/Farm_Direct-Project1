@@ -58,8 +58,9 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="">Buy Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">Farmer Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Farmers_Login</a></li>
                     <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>
                     <li class="nav-item">
                         <a class="nav-link text-warning" href="#"><strong>Cart</strong> <i class="fas fa-cart-plus"></i></a>
                     </li>
