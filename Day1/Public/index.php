@@ -2,146 +2,163 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Farm Connect: Buy and Sell Raw Product Online</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font-Awesome Icons -->
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/heroic-features.css" rel="stylesheet">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Connect: Buy and Sell Raw Products Online</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
-        .col-md-4:hover img {
-            transform: scale(1.0);
-            transition: all 0.5s ease-in;
-            filter: blur(2px) brightness(85%);
-            position: relative;
-            box-shadow: 0 0 16px cyan;
+        body {
+            font-family: Arial, sans-serif;
         }
 
-        .hint {
-            position: absolute;
-            z-index: 1;
+        .hero {
+            background: url('image/background4.jpg') center/cover no-repeat;
+            height: 400px;
+            color: white;
             text-align: center;
-            top: 30%;
-            left: 40%;
-            color: #fff;
-            font-weight: bold;
-            opacity: 0;
-            transition: 2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
-        .col-md-4:hover :not(img) {
-            opacity: 1;
+        .hero h1 {
+            font-weight: bold;
         }
-        
+
+        .marketplace h1 {
+            margin-bottom: 20px;
+        }
+
+        .thumbnail img:hover {
+            transform: scale(1.05);
+            filter: brightness(85%);
+            transition: transform 0.3s ease-in, filter 0.3s ease-in;
+            box-shadow: 0 0 16px rgba(0, 255, 255, 0.5);
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            color: #333;
+            padding: 1em 0;
+            text-align: center;
+        }
     </style>
 </head>
 
-<body style="padding-top: 0px; padding-bottom: 0px;">
-
+<body>
     <!-- Navigation -->
-    <?php
-    include("dbconf.php");
-    ?>
-
-    <header class="jumbotron hero-spacer" style="background: url(image/background4.jpg); margin-top: 0px; background-size: cover; height: 400px;">
-        <nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: 0.7;" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.php" style="padding-right: 100px; font-size: 25px;"><strong>FarmDirect.com</strong></a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="register.php" style="font-weight: bold;padding-right: 80px;">Register</a></li>
-                        <li><a href="login.php" style="font-weight: bold;padding-right: 80px;">Buy Farm Products</a></li>
-                        <li><a href="loginfarmers.php" style="font-weight: bold;padding-right: 80px;">Login As Farmer</a></li>
-                        <li><a href="#" style="font-weight: bold;padding-right: 50px;">How it Works</a></li>
-                        <li>
-                            <a class="cart" href="#" style="color: #f9a023;">
-                                <strong>Cart</strong><i class="fa fa-cart-plus" style="color:#f9a023;"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <h1 align="center" style="padding-top: 80px; color: #fff;"><strong>Taking Agriculture to Another Level</strong></h1>
-        <p align="center" style="color: #fff;">A commercial platform to expand the customer scale for farmers and ease purchase for buyers online.</p>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
         <div class="container">
-            <form method="post" action="searchresult.php" style="width: 45%; margin: auto;">
-                <input type="text" name="searchvalue" placeholder="What do you need?" maxlength="20" style="margin-left: 80px;width: 300px; padding:7px; border:1px solid blue; border-radius:5px;">
-                <input class="btn" type="submit" name="search" value="Search" style="padding: 7px; background: blue; border: 2px solid blue; color: white;margin-left: -5px;" />
-            </form>
+            <a class="navbar-brand" href="index.php"><strong>FarmDirect</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="">Buy Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Farmer Login</a></li>
+                    <li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link text-warning" href="#"><strong>Cart</strong> <i class="fas fa-cart-plus"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Taking Agriculture to Another Level</h1>
+        <p>A platform to expand opportunities for farmers and simplify purchases for buyers online.</p>
+        <form class="d-flex justify-content-center" action="searchresult.php" method="post">
+            <input class="form-control w-50 me-2" type="text" name="searchvalue" placeholder="What do you need?" maxlength="20">
+            <button class="btn btn-primary" type="submit" name="search">Search</button>
+        </form>
     </header>
 
-    <div class="container">
-        <div class="row text-center">
-            <h1 align="center"><strong>Explore Our Marketplace</strong></h1><br /><br />
-
+    <!-- Marketplace -->
+    <div class="container my-5">
+        <div class="marketplace text-center">
             <?php
-            $count = "SELECT * FROM products";
-            $countquery = mysqli_query($connect, $count);
-            $c = mysqli_num_rows($countquery);
-            $rand = rand(9, $c) - 9;
+            include("dbconf.php");
 
-            $sql = "SELECT * FROM products WHERE id > '$rand' LIMIT 9";
-            $run_user = mysqli_query($connect, $sql);
+            // Check if a category is selected
+            if (isset($_GET['category'])) {
+                $category = $_GET['category'];
+                $name = isset($_GET['name']) ? $_GET['name'] : '';  // Safely initialize $name
 
-            $check_user = mysqli_num_rows($run_user);
+                // Query to fetch products from the selected category
+                $sql = "SELECT * FROM products WHERE category = '$category'";
+                $result = mysqli_query($connect, $sql);
 
-            if ($check_user > 0) {
-                while ($row = mysqli_fetch_array($run_user)) {
-            ?>
+                // Display category name dynamically
+                echo "<h1>$category</h1>";
+
+                // Check if any products are found
+                if (mysqli_num_rows($result) > 0) {
+                    echo "<div class='row g-4'>";
+
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        ?>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <img class="card-img-top" src="assets/<?php echo $row['name']; ?>.jpg" alt="<?php echo htmlspecialchars($row['name']); ?>">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                                    <p class="card-text">Price: $<?php echo number_format($row['price'], 2); ?></p>
+                                    <a href="product_detail.php?id=<?php echo $row['id']; ?>" class="btn btn-primary">View Details</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                    echo "</div>";
+                } else {
+                    echo "<p>No products found in this category.</p>";
+                }
+            } else {
+                // If no category is selected, show the category images
+                $categories = [
+                    'Fruits' => 'fruits.jpg',
+                    'Vegetables' => 'vegetables.jpg',
+                    'Dairy' => 'dairy.jpg',
+                    'Grains' => 'grains.jpg',
+                    'Spices' => 'spices.jpg',
+                    'Herbs' => 'herbs.jpg'
+                ];
+
+                echo "<h1>Explore Our Marketplace</h1>";
+                echo "<div class='row g-4'>";
+                foreach ($categories as $category_name => $image_name) {
+                    $image_path = "assets/" . $image_name; // Path to the image in the 'assets' folder
+                    ?>
                     <div class="col-md-4">
-                        <div class="thumbnail" align="center">
-                            <form method="post" action="cart.php?action=add&id=<?php echo $row['id']; ?>">
-                                <a href="categoryvalue.php?action=view&value=<?php echo $row['Category']; ?>">
-                                    <span class="hint"><strong>Click to view</strong></span>
-                                    <?php
-                                    echo '<img class="img-responsive" src="data:image/jpeg;base64,' . base64_encode($row['image']) . '" style="width: 300px; height: 200px;" />';
-                                    ?>
-                                </a>
-                                <h4 class="text-info"><strong><?php echo $row['Category']; ?></strong></h4>
-                            </form>
+                        <div class="card">
+                            <a href="index.php?category=<?php echo urlencode($category_name); ?>"> <!-- Link to filter products by category -->
+                                <img class="card-img-top" src="<?php echo $image_path; ?>" alt="<?php echo htmlspecialchars($category_name); ?>">
+                            </a>
+                            <div class="card-body">
+                                <h5 class="card-title"><?php echo $category_name; ?></h5>
+                            </div>
                         </div>
                     </div>
-            <?php
+                    <?php
                 }
+                echo "</div>";
             }
             ?>
         </div>
     </div>
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!-- Footer -->
+    <footer>
+        <hr>
+        <p>Contact Us: (+94)762552365 &copy; FarmConnect. All rights reserved.</p>
+    </footer>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-    <div style="padding: 1em 0 2em 0;">
-        <footer id="footer" class="container" style="background: #fff; color: black; width: 100%;">
-            <hr style="border-top: 1px solid #ccc;"><br /><br /><br />
-            <p align="center">Contact Us: (+94)0762552365 &copy; FarmConnect. All rights reserved</p>
-        </footer>
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
