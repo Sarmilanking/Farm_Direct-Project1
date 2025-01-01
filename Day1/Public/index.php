@@ -83,7 +83,7 @@
     <div class="container my-5">
         <div class="marketplace text-center">
             <?php
-            include("dbconf.php");
+            include("dbconf/dbconf.php");
 
             // Check if a category is selected
             if (isset($_GET['category'])) {
