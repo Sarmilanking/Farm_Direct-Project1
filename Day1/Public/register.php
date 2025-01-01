@@ -1,37 +1,26 @@
 <?php
     include_once "resource/session.php";
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "mariadb";
-    $dbname = "Farm";
-
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+    include("./dbconf/dbconf.php");
 
     // Handle form submission
     if (isset($_POST["registerBtn"])) {
-        $username = mysqli_real_escape_string($conn, $_POST["username"]);
-        $email = mysqli_real_escape_string($conn, $_POST["email"]);
-        $password = mysqli_real_escape_string($conn, $_POST["password"]);
+        $username = mysqli_real_escape_string($connect, $_POST["username"]);
+        $email = mysqli_real_escape_string($connect, $_POST["email"]);
+        $password = mysqli_real_escape_string($connect, $_POST["password"]);
         $hashed_password = password_hash($password, PASSWORD_DEFAULT); // Hash password for security
 
         // Check if username or email already exists
-        $check_user = "SELECT * FROM Users WHERE username = '$username' OR email = '$email'";
-        $run_check = mysqli_query($conn, $check_user);
+        $check_user = "SELECT * FROM users WHERE username = '$username' OR email = '$email'";
+        $run_check = mysqli_query($connect, $check_user);
         if (mysqli_num_rows($run_check) > 0) {
             echo "<script>alert('Username or Email already exists');</script>";
         } else {
             // Insert user data into the Users table
-            $insert_user = "INSERT INTO Users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
-            if (mysqli_query($conn, $insert_user)) {
+            $insert_user = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$hashed_password')";
+            if (mysqli_query($connect, $insert_user)) {
                 echo "<script>window.location.href='login.php';</script>";
             } else {
-                echo "<script>alert('Error: " . $conn->error . "');</script>";
+                echo "<script>alert('Error: " . $connect->error . "');</script>";
             }
         }
     }
@@ -47,7 +36,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Farm Connect: Buy and Sell Raw Product Online</title>
+    <title>Farm connectect: Buy and Sell Raw Product Online</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -181,7 +170,7 @@
 
     <!-- Registration Section -->
     <div class="login-form">
-        <h1>FarmConnect</h1>
+        <h1>Farmconnect</h1>
         <h2>Buyer Registration</h2>
 
         <form method="POST">
@@ -211,7 +200,7 @@
     <!-- Footer -->
     <footer>
         <hr>
-        <p>Contact Us: (+94)0762552365 &copy; FarmConnect. All rights reserved.</p>
+        <p>Contact Us: (+94)0762552365 &copy; Farmconnect. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->

@@ -1,44 +1,37 @@
 <?php
-    include_once "resource/session.php";
-    $servername = "127.0.0.1";
-    $username = "root";
-    $password = "mariadb";
-    $dbname = "Farm";
+include_once "resource/session.php";
+include("./dbconf/dbconf.php");
 
-    // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+if (isset($_POST["loginBtn"])) {
+    // Prepare the SQL statement to prevent SQL injection
+    $stmt = $connect->prepare("SELECT * FROM users WHERE username = ?");
+    $stmt->bind_param("s", $_POST["username"]);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    if (isset($_POST["loginBtn"])) {
-        $username = mysqli_real_escape_string($conn, $_POST["username"]);
-        $password = mysqli_real_escape_string($conn, $_POST["pass"]);
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        $hashed_password = $row['password']; // Get the hashed password from the database
 
-        // SQL query to select the user
-        $sel_user = "SELECT * FROM Users WHERE username = '$username'";
-        $run_user = mysqli_query($conn, $sel_user);
-
-        if (mysqli_num_rows($run_user) > 0) {
-            $row = mysqli_fetch_assoc($run_user);
-            $hashed_password = $row['password']; // Get the hashed password from the database
-
-            // Verify the entered password with the hashed password
-            if (password_verify($password, $hashed_password)) {
-                // Password matches, set session and redirect
-                $_SESSION['username'] = $username;
-                echo "<script>window.open('index.php', '_self')</script>";
-            } else {
-                // Invalid password
-                echo "<script>alert('Invalid username or password');</script>";
-            }
+        // Verify the entered password with the hashed password
+        if (password_verify($_POST["pass"], $hashed_password)) {
+            // Password matches, set session and redirect
+            session_regenerate_id(true); // Prevent session fixation
+            $_SESSION['username'] = $row['username'];
+            echo "<script>window.open('index.php', '_self')</script>";
         } else {
-            // Invalid username
+            // Invalid password
             echo "<script>alert('Invalid username or password');</script>";
         }
+    } else {
+        // Invalid username
+        echo "<script>alert('Invalid username or password');</script>";
     }
+
+    $stmt->close();
+}
 ?>
+
 
 
 
