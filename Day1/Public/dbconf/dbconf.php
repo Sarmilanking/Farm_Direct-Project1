@@ -9,7 +9,7 @@ try {
 		die("connection failed".mysqli_connect_error());
 	} 
 	else {
-		echo "";
+		echo "Connected";
 	}
 } 
 catch (Exception $e) {
