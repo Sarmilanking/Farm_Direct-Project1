@@ -1,5 +1,5 @@
 <?php
-include("dbconf.php");
+include("dbconf/dbconf.php");
 
 if (isset($_GET['value'])) {
     $category = $_GET['value'];
