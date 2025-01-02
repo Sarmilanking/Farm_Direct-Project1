@@ -126,7 +126,8 @@
                     'Vegetables' => 'vegetables.jpg',
                     'Dairy' => 'dairy.jpg',
                     'Grains' => 'grains.jpg',
-                    'Spices' => 'spices.jpg',
+                    'Poultry' => 'poultry.jpg',
+                   'Spices' => 'e.jpg',
                     'Herbs' => 'herbs.jpg'
                 ];
 
