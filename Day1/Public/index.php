@@ -124,11 +124,13 @@
                 $categories = [
                     'Fruits' => 'fruits.jpg',
                     'Vegetables' => 'vegetables.jpg',
-                    'Dairy' => 'dairy.jpg',
                     'Grains' => 'grains.jpg',
                     'Poultry' => 'poultry.jpg',
-                   'Spices' => 'e.jpg',
-                    'Herbs' => 'herbs.jpg'
+                    'Fish' => 'fish.jpg' ,
+                     'Spices' => 'e.jpg',
+                     'Dairy' => 'dairy.jpg',
+                    'Herbs' => 'herbs.jpg',
+                   
                 ];
 
                 echo "<h1>Explore Our Marketplace</h1>";
