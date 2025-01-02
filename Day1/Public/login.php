@@ -57,7 +57,7 @@ if (isset($_POST["loginBtn"])) {
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f7fc;
-			background: url('image/background3.jpg') center/cover no-repeat;
+			background: url('image/background.avif') center/cover no-repeat;
 
         }
 
