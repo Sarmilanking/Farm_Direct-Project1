@@ -5,7 +5,7 @@ if (isset($_GET['value'])) {
     $category = $_GET['value'];
 
     // Fetch products by category
-    $sql = "SELECT * FROM products WHERE category = '$category'";
+    $sql = "SELECT * FROM products WHERE category = '$category'"; // categories 
     $result = mysqli_query($connect, $sql);
 
     if (mysqli_num_rows($result) > 0) {
