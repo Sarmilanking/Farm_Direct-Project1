@@ -159,7 +159,7 @@
     <!-- Footer -->
     <footer>
         <hr>
-        <p>Contact Us: (+94)762552365 &copy; FarmConnect. All rights reserved.</p>
+        <p>Contact Us: (+94)762552365 &copy; FarmDirect. All rights reserved.</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
