@@ -36,7 +36,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Farm connectect: Buy and Sell Raw Product Online</title>
+    <title>FarmDirect: Buy and Sell Raw Product Online</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -170,7 +170,7 @@
 
     <!-- Registration Section -->
     <div class="login-form">
-        <h1>Farmconnect</h1>
+        <h1>FarmDirect</h1>
         <h2>Buyer Registration</h2>
 
         <form method="POST">
@@ -200,7 +200,7 @@
     <!-- Footer -->
     <footer>
         <hr>
-        <p>Contact Us: (+94)0762552365 &copy; Farmconnect. All rights reserved.</p>
+        <p>Contact Us: (+94)0762552365 &copy; FarmDirect. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
