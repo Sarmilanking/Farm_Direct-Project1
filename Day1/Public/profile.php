@@ -1,13 +1,15 @@
-// profile.php
 <?php
-include_once "resource/session.php";
+session_start(); // Start the session at the very top
+
 include("./dbconf/dbconf.php");
 
+// Check if user is logged in
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }
 
+// Handle profile update
 if (isset($_POST['updateProfile'])) {
     $username = $_SESSION['username'];
     $new_email = mysqli_real_escape_string($connect, $_POST['email']);
