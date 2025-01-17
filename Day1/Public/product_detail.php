@@ -1,4 +1,4 @@
-// product_detail.php
+
 <?php
 include("./dbconf/dbconf.php");
 
