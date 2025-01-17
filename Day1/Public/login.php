@@ -18,7 +18,7 @@ if (isset($_POST["loginBtn"])) {
             // Password matches, set session and redirect
             session_regenerate_id(true); // Prevent session fixation
             $_SESSION['username'] = $row['username'];
-            echo "<script>window.open('index.php', '_self')</script>";
+            echo "<script>window.open('home.php', '_self')</script>";
         } else {
             // Invalid password
             echo "<script>alert('Invalid username or password');</script>";

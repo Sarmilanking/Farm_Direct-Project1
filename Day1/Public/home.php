@@ -61,7 +61,7 @@ if (isset($_POST['search'])) {
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="home.php">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="profile.php">Profile</a></li>
-                    <li class="nav-item"><a class="nav-link" href="logout.php">Logout</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.php">Logout</a></li>
                 </ul>
             </div>
         </div>
